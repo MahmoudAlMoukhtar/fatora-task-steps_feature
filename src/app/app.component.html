@@ -1,0 +1,12 @@
+<ion-app>
+  <ion-content [fullscreen]="true">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+</ion-app>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-progress-bar [value]="getProgressRatio()" color="primary"></ion-progress-bar>
+  </ion-toolbar>
+</ion-footer>
