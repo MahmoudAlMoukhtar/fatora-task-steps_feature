@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    --padding-top:80px;
+    --padding-bottom:20px;
+    
+}
+
+
+.main-text {
+    font-size: 20px;
+    color: #2f3942;
+    font-weight: bold;
+    text-align: center;
+}
+
+ion-img{
+    width: 80px;
+}
+
+.container-img{
+    width: 100%;
+}
+
+ion-checkbox{
+    width: 100%;
+    --size:25px;
+    --checkbox-background-checked:#439b9c;
+    --border-color-checked:#439b9c;
+    
+}
+
+
+
+#checkboxes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
+}
+
+.checkbox-item{
+    box-shadow: 0 6px 20px 0 rgb(18 45 46 / 20%);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.checkbox-inside-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.container-item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+}
+
+
+.container-item-text h3{
+    color: #2f3942;
+    font-size: small;
+    font-weight: bolder;
+}
+.container-item-text p{
+    color: #5c808c;
+    font-weight: bold;
+    font-size: 9px;
+    width: 100px;
+}

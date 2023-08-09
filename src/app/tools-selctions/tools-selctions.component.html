@@ -1,0 +1,72 @@
+<ion-content class="container no-margin" scrollY="false">
+
+    <h2 class="main-text">إختر الأدوات التي تناسبك</h2>
+
+    <ion-list class="container-checkboxes" id="checkboxes-list">
+
+        <div class="checkbox-item">
+
+            <ion-checkbox (ionChange)="handleCheck($event)" value="pay-links" labelPlacement="end">
+                <div class="checkbox-inside-container">
+                    <div class="container-item-text">
+                        <h3>فواتير وروابط دفع</h3>
+                        <p style="color: #5c808c; font-weight: bold; font-size: 9px;">أرسل فواتير وروابط دفع
+                            لعملائك
+                            <br />عبر
+                            الواتساب بسهولة
+                        </p>
+                    </div>
+                    <ion-img src="/assets/images/payment-links.jpg"></ion-img>
+                </div>
+            </ion-checkbox>
+        </div>
+        <div class="checkbox-item">
+            <ion-checkbox (ionChange)="handleCheck($event)" value="ecommerce" labelPlacement="end">
+                <div class="checkbox-inside-container">
+                    <div class="container-item-text">
+                        <h3>المتجر الالكتروني</h3>
+                        <p style="color: #5c808c; font-weight: bold; font-size: 9px;">متجر الكتروني متكامل يساعدك
+                            على
+                            <br /> بيع
+                            منتجاتك وخدماتك اونلاين
+                        </p>
+                    </div>
+                    <div class="container-img">
+                        <ion-img src="/assets/images/ecommerce.jpg"></ion-img>
+                    </div>
+                </div>
+            </ion-checkbox>
+        </div>
+        <div class="checkbox-item">
+            <ion-checkbox (ionChange)="handleCheck($event)" value="payment-getway" labelPlacement="end">
+                <div class="checkbox-inside-container">
+                    <div class="container-item-text">
+                        <h3>بوابة الدفع</h3>
+                        <p>
+                            استقبل أموالك على موقعك أو <br /> متجرك بأمان وبطرق متعددة
+                    </div>
+                    <div class="container-img">
+                        <ion-img src="/assets/images/payment-getway.jpg"></ion-img>
+                    </div>
+                </div>
+            </ion-checkbox>
+        </div>
+        <div class="checkbox-item">
+            <ion-checkbox (ionChange)="handleCheck($event)" value="pos" labelPlacement="end">
+                <div class="checkbox-inside-container">
+                    <div class="container-item-text">
+                        <h3>الكاشير و POS</h3>
+                        <p style="color: #5c808c; font-weight: bold; font-size: 9px;">
+                            اعطي عملائك تجربة شراء مثالية عبر <br />
+                            نظام الكاشير ونقاط البيع (POS)
+                    </div>
+                    <div class="container-img">
+                        <ion-img src="/assets/images/pos.jpg"></ion-img>
+                    </div>
+                </div>
+            </ion-checkbox>
+        </div>
+
+    </ion-list>
+
+</ion-content>
