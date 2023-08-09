@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="container-content" id="container-success_message" *ngIf="formServ.statusRequest ==='success'">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <div class="container-img">
+        <ion-img id="congratulations-img" src="/assets/images/congratulations.png"></ion-img>
+      </div>
+      <h2>مرحبا بك في فاتورة !</h2>
+      <!--     <div class="container-img">
+        <ion-img id="logo-img" src="/assets/images/logo/logo-ar.svg"></ion-img>
+      </div> -->
+    </div>
+    <p>يمكنك الآن الاستفادة من خدمات فاتورة</p>
+    <div class="container-img">
+      <ion-img id="logo-img" src="/assets/images/logo/logo-ar.svg"></ion-img>
+    </div>
+  </div>
+  <div class="container-content" *ngIf="formServ.statusRequest ==='wait'">
+    الرجاء الانتظار...<ion-icon name="reload-circle"></ion-icon>
+  </div>
+  <div class="container-content" *ngIf="formServ.statusRequest ==='error'">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <ion-icon color="danger" size="large" name="alert-circle-outline"></ion-icon>
+      <h2> عذرا حدث خطأ ما!</h2>
+    </div>
+    <p>
+      يرجى إعادة إدخال البيانات ثم إعادة ارسالها مرة أخرى
+    </p>
+  </div>
+</ion-content>
