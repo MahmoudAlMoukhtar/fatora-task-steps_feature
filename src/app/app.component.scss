@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::ng-deep * {
+    margin: 0;
+}
+
+.wrapper{
+    padding: 20px;
+}
+
+
+ion-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+ion-progress-bar{
+    height: 10px;
+    --progress-background:#439b9c;
+    --background:#dadada;
+}
+
+#next-button{
+    gap: 20px;
+    width: 90%;
+    font-size: medium;    
+    --background: #439b9c;
+    --padding-top:15px;
+    --padding-bottom:15px;
+
+    
+}
+
+#skip-button{
+    font-size: small;
+    color: #439b9c;
+    
+}
+
+ion-footer{
+    box-shadow: none;
+    background-color: #fff;
+}
