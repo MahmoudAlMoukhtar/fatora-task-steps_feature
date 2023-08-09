@@ -1,12 +1,15 @@
 <ion-app>
-  <ion-content [fullscreen]="true">
-    <ion-router-outlet></ion-router-outlet>
+  <ion-content [fullscreen]="true" class="no-margin">
+    <ion-router-outlet>
+    </ion-router-outlet>
   </ion-content>
+  <ion-footer class="wrapper" *ngIf="steps">
+    <ion-progress-bar reversed="true" [value]="getProgressRatio()"></ion-progress-bar>
+    <ion-button form="myForm" type="submit" id="next-button" strong="true" size="small" expand="full" shape="round"
+      (click)="goToNext($event)">
+      التالي
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-button id="skip-button" strong="true" fill="clear" (click)="skip()">تخطي</ion-button>
+  </ion-footer>
 </ion-app>
-
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-progress-bar [value]="getProgressRatio()" color="primary"></ion-progress-bar>
-  </ion-toolbar>
-</ion-footer>
