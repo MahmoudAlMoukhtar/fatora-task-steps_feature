@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+}
+ion-item {
+    width: 100%;
+}
+
+ion-input,
+ion-select {
+    --highlight-color-focused: #439b9c;
+    --placeholder-color: #439b9c;
+    // --padding-start:20px
+
+}
+
+ion-icon {
+    font-size: x-large;
+    color: #439b9c;
+}
+
+.container{
+    margin: auto 0;
+    --padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.container-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-image{
+    width: 200px;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.main-text h2{
+    font-size: 18px;
+    color: #2f3942;
+    font-weight: bold;
+}
+
+.main-text p{
+    font-size: small;
+    color: #5c808c;
+    font-weight: bold;
+}
+
+.container-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+
+.input-fill-outline.sc-ion-input-md-h {
+    --border-color: var(--ion-color-step-300, #439b9c);
+    --border-radius: 4px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --border-width:2px
+    
+}
+.label-text-wrapper{
+    position: absolute;
+    transform: translateX(-50px);
+}
+
+.label-text{
+    transform: translateY(+100px) !important;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+}
+
+.custom-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #2f3942;
+    appearance: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    appearance: none;
+    background-color: #fff;
+}
+
+
+
+
+.custom-select select,input {
+  width: 100%;
+  padding: 0 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  z-index: 1;
+  position: relative;
+  color: #6f7070;
+  font-weight: 600;
+    
+}
+
+option{
+    font-size: small;
+}
+
+
+.custom-select label {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 16px;
+  transition: 0.2s ease-out;
+  color: #666;
+}
+
+.custom-select select:focus + label,
+.custom-select select:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 0 6px;
+}
+.custom-select input:focus + label,
+.custom-select input + label {
+  top: -20px;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 0 6px;
+}
+
+
+.container-input_errors{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-input_errors p{
+    font-size: smaller;
+}
+
+.invalid{
+    border-color: #b30d2e !important;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#flag{
+    width: 30px;
+}
+
+#currency{
+    font-weight: 600;
+    font-size: medium;
+    color: #439b9c;
+}
