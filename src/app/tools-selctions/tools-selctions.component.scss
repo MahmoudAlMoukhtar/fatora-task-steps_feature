@@ -21,12 +21,14 @@
     text-align: center;
 }
 
-ion-img{
-    width: 80px;
-}
+
 
 .container-img{
     width: 100%;
+}
+
+ion-img {
+    width: 80px;
 }
 
 ion-checkbox{
@@ -36,7 +38,6 @@ ion-checkbox{
     --border-color-checked:#439b9c;
     
 }
-
 
 
 #checkboxes-list {
@@ -74,6 +75,7 @@ ion-checkbox{
     font-size: small;
     font-weight: bolder;
 }
+
 .container-item-text p{
     color: #5c808c;
     font-weight: bold;
