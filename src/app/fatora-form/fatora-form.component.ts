@@ -10,10 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FatoraFormComponent  implements OnInit {
 
-  fatoraFormCred?:IFormCred
 
-constructor(public formServ:FormServService, private http:HttpClient) {
-   this.fatoraFormCred = formServ.fatoraFormCred
+constructor(public formServ:FormServService) {
 }
 
 

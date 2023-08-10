@@ -67,7 +67,7 @@
       </div>
       <div class="custom-select" [class]="{'invalid': currency.invalid && (currency.touched ||
           currency.dirty || formServ.submitClicked)}">
-          <span id="currency">QAR</span>
+        <span id="currency">QAR</span>
         <!-- <ion-icon name="storefront-outline"></ion-icon> -->
         <select required #currency="ngModel" [(ngModel)]="formServ.fatoraFormCred.currency" name="currency">
           <option value="" disabled selected>ريال قطري
@@ -82,7 +82,7 @@
         <label>
           العملة
           <p role="alert" style="color:crimson; text-align: start;"
-            *ngIf="country.invalid && (country.touched || country.dirty || formServ.submitClicked)">
+            *ngIf="currency.invalid && (country.touched || country.dirty || formServ.submitClicked)">
             required</p>
         </label>
       </div>
