@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { IFormCred } from './form-cred.model';
 import { FormServService } from './form-serv.service';
 
 @Component({
