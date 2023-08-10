@@ -1,15 +1,12 @@
 *{
     margin: 0;
 }
-ion-item {
-    width: 100%;
-}
+
 
 ion-input,
 ion-select {
     --highlight-color-focused: #439b9c;
     --placeholder-color: #439b9c;
-    // --padding-start:20px
 
 }
 
@@ -20,13 +17,21 @@ ion-icon {
 
 .container{
     margin: auto 0;
-    --padding-top:20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
+
     
+}
+
+.content-center{
+    width: 100%;
+        position: absolute;
+            top: 20%;
+            
+            transform: translateY(-20%);
 }
 
 .container-img{
@@ -34,7 +39,7 @@ ion-icon {
     display: flex;
     justify-content: center;
 }
-.main-image{
+#main-image{
     width: 200px;
 }
 
@@ -194,4 +199,24 @@ label{
     font-weight: 600;
     font-size: medium;
     color: #439b9c;
+}
+
+@media (max-height:653px) {
+    #main-image {
+        width: 150px;
+    }
+
+    .main-text h2 {
+        font-size: medium !important;
+    }
+
+    .main-text p {
+        font-size: smaller !important;
+    }
+
+    select,
+    input,
+    label {
+        font-size: smaller !important;
+    }
 }

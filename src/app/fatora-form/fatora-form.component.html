@@ -1,35 +1,59 @@
 <ion-content scrollY="false" class="container">
-  <div class="container-img">
-    <ion-img class="main-image" src="/assets/images/fatora-form.jpg" alt="fatora-form"></ion-img>
-  </div>
+  <div class="content-center">
 
-  <div class="main-text">
-    <h2>أهلا بك في عائلة فاتورة</h2>
-    <p>أخبرنا المزيد عنك</p>
-  </div>
-  <form #fatoraForm="ngForm" id="myForm">
-    <ion-list class="container-inputs">
-      <div class="container-input_errors">
-        <div class="custom-select" [class]="{'invalid': compOrProjName.invalid && (compOrProjName.touched ||
+
+    <div class="container-img">
+      <ion-img id="main-image" src="/assets/images/fatora-form.jpg" alt="fatora-form"></ion-img>
+    </div>
+
+    <div class="main-text">
+      <h2>أهلا بك في عائلة فاتورة</h2>
+      <p>أخبرنا المزيد عنك</p>
+    </div>
+    <form #fatoraForm="ngForm" id="myForm">
+      <ion-list class="container-inputs">
+        <div class="container-input_errors">
+          <div class="custom-select" [class]="{'invalid': compOrProjName.invalid && (compOrProjName.touched ||
           compOrProjName.dirty || formServ.submitClicked)}">
-          <ion-icon name="storefront-outline"></ion-icon>
-          <input required #compOrProjName="ngModel" name="compOrProjName"
-            [(ngModel)]="formServ.fatoraFormCred.compOrProjName" type="text" placeholder="زهور الربيع" />
+            <ion-icon name="storefront-outline"></ion-icon>
+            <input required #compOrProjName="ngModel" name="compOrProjName"
+              [(ngModel)]="formServ.fatoraFormCred.compOrProjName" type="text" placeholder="زهور الربيع" />
 
-          <label>
-            اسم الشركة
-            <p role="alert" style="color:crimson; text-align: start;"
-              *ngIf="compOrProjName.invalid && (compOrProjName.touched || compOrProjName.dirty || formServ.submitClicked)">
-              required</p>
-          </label>
+            <label>
+              اسم الشركة
+              <p role="alert" style="color:crimson; text-align: start;"
+                *ngIf="compOrProjName.invalid && (compOrProjName.touched || compOrProjName.dirty || formServ.submitClicked)">
+                required</p>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="container-input_errors">
-        <div class="custom-select">
-          <ion-icon name="storefront-outline"></ion-icon>
-          <select required #companyField="ngModel" [(ngModel)]="formServ.fatoraFormCred.companyField"
-            name="companyField">
-            <option value="" disabled selected>مشروع منزلي</option>
+        <div class="container-input_errors">
+          <div class="custom-select">
+            <ion-icon name="storefront-outline"></ion-icon>
+            <select required #companyField="ngModel" [(ngModel)]="formServ.fatoraFormCred.companyField"
+              name="companyField">
+              <option value="" disabled selected>مشروع منزلي</option>
+              <option value="option1">
+                Option 1</option>
+              <option value="option2">
+                Option 2</option>
+              <option value="option3">
+                Option 3</option>
+            </select>
+            <label>
+              مجال الشركة (اختياري)
+            </label>
+          </div>
+
+        </div>
+        <div class="custom-select" [class]="{'invalid': country.invalid && (country.touched ||
+          country.dirty || formServ.submitClicked)}">
+          <ion-img id="flag"
+            src="https://th.bing.com/th/id/R.22bf3310c76518802114f36ca94da879?rik=QP%2bKiDoG5XLS6w&pid=ImgRaw&r=0"></ion-img>
+          <!-- <ion-icon name="storefront-outline"></ion-icon> -->
+          <select required #country="ngModel" [(ngModel)]="formServ.fatoraFormCred.country" name="country">
+            <option value="" disabled selected>قطر
+            </option>
             <option value="option1">
               Option 1</option>
             <option value="option2">
@@ -38,56 +62,35 @@
               Option 3</option>
           </select>
           <label>
-            مجال الشركة (اختياري)
+            الدولة
+            <p role="alert" style="color:crimson; text-align: start;"
+              *ngIf="country.invalid && (country.touched || country.dirty || formServ.submitClicked)">
+              required</p>
           </label>
         </div>
-
-      </div>
-      <div class="custom-select" [class]="{'invalid': country.invalid && (country.touched ||
-          country.dirty || formServ.submitClicked)}">
-        <ion-img id="flag"
-          src="https://th.bing.com/th/id/R.22bf3310c76518802114f36ca94da879?rik=QP%2bKiDoG5XLS6w&pid=ImgRaw&r=0"></ion-img>
-        <!-- <ion-icon name="storefront-outline"></ion-icon> -->
-        <select required #country="ngModel" [(ngModel)]="formServ.fatoraFormCred.country" name="country">
-          <option value="" disabled selected>قطر
-          </option>
-          <option value="option1">
-            Option 1</option>
-          <option value="option2">
-            Option 2</option>
-          <option value="option3">
-            Option 3</option>
-        </select>
-        <label>
-          الدولة
-          <p role="alert" style="color:crimson; text-align: start;"
-            *ngIf="country.invalid && (country.touched || country.dirty || formServ.submitClicked)">
-            required</p>
-        </label>
-      </div>
-      <div class="custom-select" [class]="{'invalid': currency.invalid && (currency.touched ||
+        <div class="custom-select" [class]="{'invalid': currency.invalid && (currency.touched ||
           currency.dirty || formServ.submitClicked)}">
-        <span id="currency">QAR</span>
-        <!-- <ion-icon name="storefront-outline"></ion-icon> -->
-        <select required #currency="ngModel" [(ngModel)]="formServ.fatoraFormCred.currency" name="currency">
-          <option value="" disabled selected>ريال قطري
-          </option>
-          <option value="option1">
-            Option 1</option>
-          <option value="option2">
-            Option 2</option>
-          <option value="option3">
-            Option 3</option>
-        </select>
-        <label>
-          العملة
-          <p role="alert" style="color:crimson; text-align: start;"
-            *ngIf="currency.invalid && (country.touched || country.dirty || formServ.submitClicked)">
-            required</p>
-        </label>
-      </div>
-    </ion-list>
+          <span id="currency">QAR</span>
+          <!-- <ion-icon name="storefront-outline"></ion-icon> -->
+          <select required #currency="ngModel" [(ngModel)]="formServ.fatoraFormCred.currency" name="currency">
+            <option value="" disabled selected>ريال قطري
+            </option>
+            <option value="option1">
+              Option 1</option>
+            <option value="option2">
+              Option 2</option>
+            <option value="option3">
+              Option 3</option>
+          </select>
+          <label>
+            العملة
+            <p role="alert" style="color:crimson; text-align: start;"
+              *ngIf="currency.invalid && (country.touched || country.dirty || formServ.submitClicked)">
+              required</p>
+          </label>
+        </div>
+      </ion-list>
 
-  </form>
-
+    </form>
+  </div>
 </ion-content>
