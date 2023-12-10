@@ -3,12 +3,6 @@
 }
 
 
-ion-input,
-ion-select {
-    --highlight-color-focused: #439b9c;
-    --placeholder-color: #439b9c;
-
-}
 
 ion-icon {
     font-size: x-large;
@@ -75,14 +69,7 @@ ion-icon {
 }
 
 
-.input-fill-outline.sc-ion-input-md-h {
-    --border-color: var(--ion-color-step-300, #439b9c);
-    --border-radius: 4px;
-    --padding-start: 16px;
-    --padding-end: 16px;
-    --border-width:2px
-    
-}
+
 .label-text-wrapper{
     position: absolute;
     transform: translateX(-50px);
@@ -207,11 +194,11 @@ label{
     }
 
     .main-text h2 {
-        font-size: medium !important;
+        font-size: 14px !important;
     }
 
     .main-text p {
-        font-size: smaller !important;
+        font-size: 10px !important;
     }
 
     select,

@@ -1,5 +1,7 @@
 {
   "name": "fatora-task",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
